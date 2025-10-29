@@ -8,10 +8,12 @@ import java.util.stream.Collectors;
 
 public class UserDAO {
 
-    private List<User> users = new ArrayList<>(Arrays.asList(
+    private final List<User> users = new ArrayList<>(Arrays.asList(
             new User(0, "Steve Rogers"),
             new User(1, "Tony Stark"),
-            new User(2, "Carol Danvers")
+            new User(2, "Bruce Banner"),
+            new User(3, "Natasha Romanoff"),
+            new User(4, "Carol Danvers")
     ));
 
     Optional<User> getUserById(int id) {
@@ -25,6 +27,4 @@ public class UserDAO {
                 .map(User::name)
                 .collect(Collectors.toList());
     }
-
-
 }
